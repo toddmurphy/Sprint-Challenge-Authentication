@@ -1,13 +1,7 @@
 const request = require('supertest');
-const db = require('../database/dbConfig');
-const bcrypt = require('bcryptjs');
+// const db = require('../database/dbConfig');
+// const bcrypt = require('bcryptjs');
 const server = require('../api/server');
-
-describe('server', function() {
-  it('runs the tests', function() {
-    expect(true).toBe(true);
-  });
-});
 
 // describe('POST /api/login', () => {
 //   it('should return status of 200', async () => {
@@ -25,3 +19,13 @@ describe('server', function() {
 //     expect(res.status).toBe(200);
 //   });
 // });
+
+describe('it should return json', function() {
+  it('should return json', function() {
+    return request(server)
+      .post('/register')
+      .then(res => {
+        expect(res.body.api).toBe('up');
+      });
+  });
+});

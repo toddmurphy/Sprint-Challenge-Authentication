@@ -9,7 +9,7 @@ describe('GET /', function() {
       .get('/')
       .then(res => {
         //check that the status code is 200
-        expect(res.status).toBe(404);
+        expect(res.status).toBe(200);
       });
   });
 });
