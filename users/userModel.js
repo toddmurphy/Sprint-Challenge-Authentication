@@ -8,8 +8,10 @@ module.exports = {
 };
 
 //findBy --> login - finding user by 'username'
-function findBy() {
-  return db('users');
+function findBy(user) {
+  return db('users')
+    .where('username', user)
+    .first();
 }
 
 //getUserById --> get a single user by their 'id'
