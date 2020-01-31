@@ -30,8 +30,3 @@ function addUser(user) {
       return getUserById(id).where('id', id);
     });
 }
-// if the .then in addUser doesnt return the user swap this as it works
-// .then(ids => {
-//     console.log(ids);
-//     return getUserbyID(ids[0]);
-//   });
