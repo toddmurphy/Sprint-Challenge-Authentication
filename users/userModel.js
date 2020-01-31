@@ -30,3 +30,5 @@ function addUser(user) {
       return getUserById(id).where('id', id);
     });
 }
+
+//getJokes --> try to get all jokes to show ??
